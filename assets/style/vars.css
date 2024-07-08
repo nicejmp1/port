@@ -1,0 +1,35 @@
+:root {
+
+    --fontG: "Gmarket Sans";
+    --fontP: "PP Eiko";
+    --fontN: "Noto Sans KR";
+
+
+    --black: #000;
+    --black100: #000;
+    --black200: #000;
+    --black300: #000;
+    --black400: #000;
+    --black500: #000;
+
+    --white: #fff;
+    --white100: #fff;
+    --white200: #fff;
+    --white300: #fff;
+    --white400: #fff;
+    --white500: #fff;
+
+    --bgColor: #202022;
+    --pointColor: #269CDE;
+
+    font-family: var(--fontG), var(--fontN);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}

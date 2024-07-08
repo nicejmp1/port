@@ -1,0 +1,130 @@
+@import 'reset.css';
+@import 'vars.css';
+@import 'fonts.css';
+
+#matter-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* overflow: hidden; */
+}
+
+svg {
+    display: none;
+}
+
+#header {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #DAD4D1;
+}
+
+#header .header__title {
+    text-align: center;
+}
+
+#header .header__title .header__sub {
+    padding-top: 70px;
+    font-size: 2vw;
+}
+
+#header .header__bottom {
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+#main {}
+
+#section1 {
+    position: relative;
+    background-color: var(--bgColor);
+    padding-right: 8.125vw;
+    padding-left: 8.125vw;
+}
+
+#section1 .rage-intro {
+    position: relative;
+}
+
+#section1 .intro-number {
+    position: absolute;
+    text-align: right;
+    box-sizing: border-box;
+    overflow: hidden;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    height: 100vh;
+}
+
+#section1 .intro-number img {
+    height: 95vh;
+    max-height: 800px;
+    width: auto;
+    float: right;
+    margin: 2.5vh 0;
+    display: block;
+}
+
+#section1 .intro-number.outline {
+    position: relative;
+    z-index: 10;
+    top: 0;
+    right: 0;
+}
+
+#section1 .text {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    position: relative;
+    z-index: 11;
+    background-image: linear-gradient(to bottom, rgba(35, 35, 38, 0.1) 0%, rgba(35, 35, 38, 0.1) 90%);
+    background-repeat: repeat-x;
+    color: #f5f1ee;
+
+    /* 텍스트 색상 */
+}
+
+#section1 .text .left {
+    width: 38.75vw;
+
+}
+
+#section1 .text .left h2 {
+    font-size: 6.5rem;
+    margin-bottom: 32px;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #f5f1ee;
+}
+
+#section1 .text .right {
+    width: 38.75vw;
+    columns: 2;
+    column-count: 2;
+    column-gap: 2vw;
+}
+
+#section1 .text .right p {
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.625;
+    margin: 0 0 16px;
+    color: #f5f1ee;
+}
