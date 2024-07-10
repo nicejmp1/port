@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@font-face {
+    font-family: 'Gmarket Sans';
+    src: url('../../fonts/gmarket/GmarketSansTTFBold.woff2') format('woff2'),
+        url('../../fonts/gmarket/GmarketSansTTFBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gmarket Sans';
+    src: url('../../fonts/gmarket/GmarketSansTTFMedium.woff2') format('woff2'),
+        url('../../fonts/gmarket/GmarketSansTTFMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gmarket Sans';
+    src: url('../../fonts/gmarket/GmarketSansTTFLight.woff2') format('woff2'),
+        url('../../fonts/gmarket/GmarketSansTTFLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Editorial New';
+    src: url('../../fonts/edi/PPEditorialNew-Italic.woff2') format('woff2'),
+        url('../../fonts/edi/PPEditorialNew-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Editorial New';
+    src: url('../../fonts/edi/PPEditorialNew-Ultrabold.woff2') format('woff2'),
+        url('../../fonts/edi/PPEditorialNew-Ultrabold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Editorial New';
+    src: url('../../fonts/edi/PPEditorialNew-Regular.woff2') format('woff2'),
+        url('../../fonts/edi/PPEditorialNew-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Editorial New';
+    src: url('../../fonts/edi/PPEditorialNew-UltraboldItalic.woff2') format('woff2'),
+        url('../../fonts/edi/PPEditorialNew-UltraboldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Editorial New';
+    src: url('../../fonts/edi/PPEditorialNew-Ultralight.woff2') format('woff2'),
+        url('../../fonts/edi/PPEditorialNew-Ultralight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Editorial New';
+    src: url('../../fonts/edi/PPEditorialNew-UltralightItalic.woff2') format('woff2'),
+        url('../../fonts/edi/PPEditorialNew-UltralightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Neue World Condensed';
+    src: url('../../fonts/neue/PPNeueWorld-CondensedRegular.woff2') format('woff2'),
+        url('../../fonts/neue/PPNeueWorld-CondensedRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Neue World';
+    src: url('../../fonts/neue/PPNeueWorld-Regular.woff2') format('woff2'),
+        url('../../fonts/neue/PPNeueWorld-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Neue World Extended';
+    src: url('../../fonts/neue/PPNeueWorld-ExtendedThin.woff2') format('woff2'),
+        url('../../fonts/neue/PPNeueWorld-ExtendedThin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Neue World Super Cond';
+    src: url('../../fonts/neue/PPNeueWorld-SuperCondensedLight.woff2') format('woff2'),
+        url('../../fonts/neue/PPNeueWorld-SuperCondensedLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Neue World Semi Cond Ulbold';
+    src: url('../../fonts/neue/PPNeueWorld-SemiCondensedUltrabold.woff2') format('woff2'),
+        url('../../fonts/neue/PPNeueWorld-SemiCondensedUltrabold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Neue World Semi Extd';
+    src: url('../../fonts/neue/PPNeueWorld-SemiExtendedBlack.woff2') format('woff2'),
+        url('../../fonts/neue/PPNeueWorld-SemiExtendedBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PP Neue World';
+    src: url('../../fonts/neue/PPNeueWorld-Thin.woff2') format('woff2'),
+        url('../../fonts/neue/PPNeueWorld-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HouseGothic';
+    src: url('../../fonts/house/HouseGothicBoldFour.woff2') format('woff2'),
+        url('../../fonts/house/HouseGothicBoldFour.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

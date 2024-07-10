@@ -9,6 +9,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/pathseg@1.2.1/pathseg.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/poly-decomp@0.3.0/build/decomp.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
     <link rel="stylesheet" href="assets/style/style.css">
     <title>포트폴리오</title>
 </head>
@@ -17,29 +18,110 @@
     <div class="loading"></div>
     <header id="header" role="banner">
         <div class="header__title">
-            <h1>milkshake</h1>
+            <h1>frontend developer</h1>
             <div class="header__sub">
-                <span>a(chaotic)year</span>
-                <p>in review</p>
+                <span>코드 한 줄에 담긴 열정,</span> <br>
+                <span>사용자와 소통하는 감각적인 인터페이스를 개발합니다</span>
             </div>
         </div>
         <div id="matter-container">
-            <!-- SVG 요소들 -->
+
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <path id="matter-path" d="M10 10 H 90 V 90 H 10 L 10 10" stroke="none" />
-                <path id="matter-path" d="M10 10 H 90 V 90 H 10 L 10 10" stroke="none" />
-                <path id="matter-path" d="M10 10 H 90 V 90 H 10 L 10 10" stroke="none" />
-                <path id="matter-path" d="M10 10 H 90 V 90 H 10 L 10 10" stroke="none" />
-                <path id="matter-path" d="M10 10 H 90 V 90 H 10 L 10 10" stroke="none" />
-                <path id="matter-path" d="M10 10 H 90 V 90 H 10 L 10 10" stroke="none" />
-                <path id="matter-path" d="M10 10 H 90 V 90 H 10 L 10 10" stroke="none" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path"
+                    d="M37 0L46.9934 27.0066L74 37L46.9934 46.9934L37 74L27.0066 46.9934L0 37L27.0066 27.0066L37 0Z"
+                    fill="#D9D9D9" />
+                <path class="matter-path" d="M10 10 H 90 V 90 H 10 L 10 10" stroke="none" />
             </svg>
         </div>
         <div class="header__bottom">
             <span>scroll to explore</span>
         </div>
-
     </header>
+
     <main id="main">
         <section id="section1" class="intro-slide">
             <div class="rage-intro">
@@ -68,16 +150,242 @@
                         except we wrapped it in loud colors and huge typography.</p>
                 </div>
             </div>
-
         </section>
+        <section id="section2">
+            <div class="skill__title">
+                <h3>다재다능한 웹 개발자</h3>
+            </div>
+            <div class="skill">
+                <div class="stat">
+                    <h4 class="">html & CSS</h4>
+                    <span class="hover-target ">90</span>
+                    <img class="hover-img wave" src="assets/img/html&css.gif" alt="">
+                </div>
+                <div class="stat">
+                    <span class="hover-target">70</span>
+                    <img class="hover-img" src="assets/img/javascript.gif" alt="">
+                    <h4 class="">javascript</h4>
+                </div>
+                <div class="stat">
+                    <h4>react.js</h4>
+                    <span class="hover-target">78</span>
+                    <img class="hover-img" src="assets/img/React.gif" alt="">
+                </div>
+                <div class="stat">
+                    <span class="hover-target">70</span>
+                    <img class="hover-img" src="assets/img/vue.gif" alt="">
+                    <h4>vue.js</h4>
+                </div>
+                <div class="stat">
+                    <h4>next.js</h4>
+                    <span class="hover-target">63</span>
+                    <img class="hover-img" src="assets/img/next.gif" alt="">
+                </div>
+                <div class="stat">
+                    <span class="hover-target">55</span>
+                    <img class="hover-img" src="assets/img/php.gif" alt="">
+                    <h4>php & mysql</h4>
+                </div>
+                <div class="stat">
+                    <h4>node.js</h4>
+                    <span class="hover-target">60</span>
+                    <img class="hover-img" src="assets/img/node.gif" alt="">
+                </div>
+                <div class="stat">
+                    <span class="hover-target">954 +</span>
+                    <img class="hover-img" src="assets/img/git.gif" alt="">
+                    <h4>github <br> commits</h4>
+                </div>
+            </div>
+        </section>
+        <section id="section3" class="intro-slide2">
+            <div class="two__intro">
+                <div class="two__number">
+                    <img src="assets/img/two.svg" alt="">
+                </div>
+            </div>
+            <div class="text-top">
+                <div class="right">
+                    <p>We had a busy year partnering with friends both old and new. We’re eternally grateful for the
+                        clients we’ve been working with for years, and welcome new relationships we hope to grow.
+
+                        We stuck with our mission and focus. All of our work was</p>
+                    <p>creating brands and digital experiences - usually together. As usual, we were lucky enough to
+                        work in a ton of different industries like: food tech, education, psychedlic medicine, female
+                        entrepreneurship, hospitality, and real estate.</p>
+                </div>
+            </div>
+            <div class="text2">
+                <div class="left">
+                    <h2>THE THINGS WE'VE MADE</h2>
+                </div>
+            </div>
+        </section>
+        <!-- //section3 -->
+
+        <section id="section4" class="intro-slide3">
+            <div class="project__header">
+                <div class="project__title inside">
+                    <h2>my project</h2>
+                </div>
+            </div>
+            <div class="project__header">
+                <div class="project__title textout">
+                    <h2>my project</h2>
+                    <div class="project__text">
+                        <h3>strategy + web</h3>
+                        <p>How does a global real estate company re-imagine their digital presence? Lots of strategy,
+                            interviews, and code.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project__img">
+                <img src="assets/img/123.gif" alt="">
+                <img src="assets/img/123.gif" alt="">
+                <img src="assets/img/123.gif" alt="">
+            </div>
+        </section>
+
+
+        <section id="section5" class="intro-slide3">
+            <div class="project__header">
+                <div class="project__title inside">
+                    <h2>my project</h2>
+                </div>
+            </div>
+            <div class="project__header">
+                <div class="project__title textout">
+                    <h2>my project</h2>
+                    <div class="project__text">
+                        <h3>strategy + web</h3>
+                        <p>How does a global real estate company re-imagine their digital presence? Lots of strategy,
+                            interviews, and code.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project__img">
+                <img src="assets/img/123.gif" alt="">
+                <img src="assets/img/123.gif" alt="">
+                <img src="assets/img/123.gif" alt="">
+            </div>
+        </section>
+
+        <!-- //section4 -->
+
+
+
     </main>
     <footer id="footer"></footer>
     <script src="js/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script>
+        const lenis = new Lenis()
 
+        lenis.on('scroll', (e) => {
+            console.log(e)
+        })
+
+        lenis.on('scroll', ScrollTrigger.update)
+
+        gsap.ticker.add((time) => {
+            lenis.raf(time * 600)
+        })
+
+        gsap.ticker.lagSmoothing(0)
     </script>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray(".rage-intro").forEach((panel, i) => {
+            ScrollTrigger.create({
+                trigger: panel,
+                start: "top top",
+                end: "+=1000",
+                pin: true,
+                scrub: 0.5,
+                markers: true,
+                pinSpacing: false,
+                onEnter: () => {
+                    gsap.to(panel.querySelector('.outline'), {
+                        backgroundColor: "var(--bgColor)", // 원하는 배경색으로 변경
+                    });
+                },
+                onLeaveBack: () => {
+                    gsap.to(panel.querySelector('.outline'), {
+                        backgroundColor: "transparent", // 원래 상태로 복원
+                    });
+                }
+            });
+        });
+
+        gsap.to("#section3 .two__intro .two__number img", {
+            xPercent: 200,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#section3",
+                start: "top top",
+                end: "bottom top",
+                scrub: true,
+                markers: true,
+            }
+        });
+
+        gsap.utils.toArray(".text-top").forEach((panel, i) => {
+            ScrollTrigger.create({
+                trigger: panel,
+                start: "top top",
+                end: "+=900",
+                pin: true,
+                scrub: 0.5,
+                markers: true,
+                pinSpacing: false,
+
+            })
+        })
+
+        gsap.utils.toArray(".textout").forEach((panel, i) => {
+            ScrollTrigger.create({
+                trigger: panel,
+                start: "-=60",
+                end: "+=2400",
+                pin: true,
+                scrub: 0.5,
+                markers: true,
+                pinSpacing: true,
+            })
+        })
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hoverTargets = document.querySelectorAll('#section2 .skill .stat .hover-target');
+            hoverTargets.forEach(target => {
+                const hoverImg = target.nextElementSibling;
+
+                target.addEventListener('mouseover', function () {
+                    hoverImg.style.opacity = '1';
+                    hoverImg.style.visibility = 'visible';
+                });
+
+                target.addEventListener('mouseout', function () {
+                    hoverImg.style.opacity = '0';
+                    hoverImg.style.visibility = 'hidden';
+                });
+
+                target.addEventListener('mousemove', function (event) {
+                    const mouseX = event.clientX;
+                    const mouseY = event.clientY;
+                    hoverImg.style.left = `${mouseX}px`;
+                    hoverImg.style.top = `${mouseY}px`;
+                });
+            });
+
+        });
+    </script>
+
 </body>
 
 </html>

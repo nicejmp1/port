@@ -1,9 +1,11 @@
 :root {
 
+    --fontL: "Lobster";
     --fontG: "Gmarket Sans";
-    --fontP: "PP Eiko";
-    --fontN: "Noto Sans KR";
-
+    --fontQ: "Quicksand";
+    --fontP: "PP Editorial New";
+    --fontN: "PP Neue World Condensed";
+    --fontH: "HouseGothic";
 
     --black: #000;
     --black100: #000;
@@ -20,9 +22,9 @@
     --white500: #fff;
 
     --bgColor: #202022;
-    --pointColor: #269CDE;
+    --pointColor: #BBF2C3;
 
-    font-family: var(--fontG), var(--fontN);
+    font-family: var(--fontG), var(--fontL);
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;

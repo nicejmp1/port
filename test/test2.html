@@ -4,674 +4,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="test.css">
+    <title>SVG Drop</title>
+    <style>
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            display: none;
+        }
+
+        #matter-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: #000;
+        }
+    </style>
 </head>
 
-<body class="">
+<body>
 
-    <canvas id="stats-canvas" width="1598" height="1596" style="width: 799px; height: 798px;" class=""></canvas>
-    <canvas id="projects" width="1598" height="1596" style="width: 799px; height: 798px;"></canvas>
+    <div id="loading">Loading...</div>
+    <div id="matter-container"></div>
 
-    <!-- DEV ONLY -->
-    <div class="gridMe hidden">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-
-    <main id="universe" data-scrollbar="true" tabindex="-1" style="overflow: hidden; outline: none;">
-        <div class="scroll-content" style="transform: translate3d(0px, 0px, 0px);">
-            <header id="header">
-                <a href="https://milkshake.studio" target="_blank">
-                    <img src="images/logo.svg" alt="Milkshake Studio">
-                </a>
-            </header>
-
-
-            <section class="dropping-numbers-section" data-scroll="" data-scroll-section="" style="height: 798px;">
-                <h1 class="pt10">A <span>(CHAOTIC)</span>Year<br>in Review</h1>
-                <canvas id="dropping_numbers" class="active" width="1598" height="1596" data-pixel-ratio="2"
-                    style="width: 799px; height: 798px; background:  0% 0% / contain transparent;"></canvas>
-                <div class="hidden canvas-holder" id="dropping_numbers_holder" data-canvas="dropping_numbers"></div>
-                <!-- <div id="dropping_numbers"></div> -->
-                <svg id="svg" width="192" height="418" viewBox="0 0 192 418" fill="none"
-                    xmlns="http://www.w3.org/2000/svg" class="hidden">
-                    <!-- 0 -->
-                    <path
-                        d="M192.545 339.27V86.7504C192.545 69.0503 192.545 43.0904 173.665 24.2104C158.325 8.28036 132.955 0.610352 96.3751 0.610352C60.3851 0.610352 35.0151 8.28036 19.0851 24.2104C0.205133 43.0904 0.795132 69.0503 0.795132 86.7504V339.27C0.795132 356.38 0.205133 382.93 19.0851 401.81C35.0151 417.15 60.3851 424.82 96.3751 424.82C132.955 424.82 158.325 417.15 173.665 401.81C192.545 382.93 192.545 356.38 192.545 339.27ZM103.455 356.38C103.455 359.92 100.505 363.46 96.3751 363.46C92.2451 363.46 89.2951 359.92 89.2951 356.38V69.6403C89.2951 65.5104 92.2451 62.5604 96.3751 62.5604C100.505 62.5604 103.455 65.5104 103.455 69.6403V356.38Z"
-                        fill="#FF4545"></path>
-                    <!-- 2 -->
-                    <path
-                        d="M191.195 142.107V86.0568C191.195 68.9468 191.785 42.3968 172.905 23.5168C157.565 8.17684 132.195 0.506836 95.6152 0.506836C59.0353 0.506836 34.2552 8.17684 18.3252 23.5168C-0.554756 42.3968 0.0352447 68.9468 0.0352447 86.0568V165.117H88.5353V68.9468C88.5353 64.8168 91.4852 61.8668 95.6152 61.8668C99.7452 61.8668 102.695 64.8168 102.695 68.9468V148.597C102.695 162.167 100.335 171.607 94.4352 179.867L22.4552 275.447C8.88524 293.737 0.0352447 309.077 0.0352447 334.447V417.047H191.195V348.607H88.5353V332.677C88.5353 326.777 90.8953 319.107 94.4352 314.387L167.595 217.037C184.115 195.207 191.195 175.737 191.195 142.107Z"
-                        fill="#FF4545"></path>
-                </svg>
-                <div class="loading-info">
-                    Loading <span id="loading-text"> 100%</span>
-                </div>
-                <div class="loaded-info hide-on-phone">
-                    Scroll to Explore
-                </div>
-                <div class="only-on-phone loaded-info mobile-loaded-info js-scroll-start">
-                    Tap to Explore
-                </div>
-            </section>
-
-            <section class="info-slide" id="section-01" data-scroll="" data-scroll-section="">
-                <div class="large-number active" data-sticky="" style="">
-                    <div class="number-wrapper" data-reveal="" style="">
-                        <img class="full-number fixer" src="../assets/img/num01-1.svg" alt="Section One">
-                    </div>
-                    <div class="number-wrapper outlined">
-                        <img class="full-number" src="../assets/img/num01.svg" alt="Section One">
-                    </div>
-
-                </div>
-
-
-
-
-                <div class="text">
-                    <div class="left">
-                        <h2>Where to begin?</h2>
-                    </div>
-                    <div class="right">
-                        <p>No need to state the obvious. 2020 was a crazy year. Between pandemics, elections, civic
-                            unrest, devastating forest fires, murder hornets, and not being able to shake hands with
-                            anyone, there’s been a lot to process.</p>
-
-                        <p>But through it all, a few things remained constant. Email. The death of big retail. Fedoras
-                            still not being fashionable. Debates like “Should designers code?” and “Is a taco a
-                            sandwich?”</p>
-
-                        <p>It was a year to reflect on the little things. Things that seem annoying or pointless
-                            suddenly seem slightly less annoying and (maybe) less pointless. We recognize the little
-                            things, and cherish them for what they are on our little corner of the internet.</p>
-
-                        <p>At Milkshake, we kept on trucking. Making things on the internet for bold businesses that are
-                            focused on their future. This is a small peek into our year. A year like many experienced,
-                            except we wrapped it in loud colors and huge typography.</p>
-                        <p></p>
-                    </div>
-                </div>
-
-            </section>
-
-
-
-            <section id="section-stats" data-scroll-section="">
-                <div class="hidden canvas-holder" id="stats_canvas_holder" data-canvas="stats-canvas"></div>
-                <div class="header">
-                    <!-- <h3>By the Numbers</h3> -->
-                    <p>A look at 2020 by the numbers.</p>
-                </div>
-                <div class="stats">
-                    <!-- SINGLE STAT -->
-                    <div class="stat" data-view="out">
-                        <h4 class="stat-title">Projects<br>Launched</h4>
-                        <span class="stat-number">12</span>
-                        <img src="images/dancing-heros.gif" class="stat-hover-image">
-                    </div>
-
-                    <!-- SINGLE STAT -->
-                    <div class="stat" data-view="out">
-                        <h4 class="stat-title">States <br>Driven Through</h4>
-                        <span class="stat-number">18</span>
-                        <img src="images/road.gif" class="stat-hover-image">
-                    </div>
-
-                    <!-- SINGLE STAT -->
-                    <div class="stat" data-view="out">
-                        <h4 class="stat-title">Slices of Paulie Gee’s <br>pizza consumed</h4>
-                        <span class="stat-number">173</span>
-                        <img src="images/seinfeld-dance.gif" class="stat-hover-image">
-                    </div>
-
-                    <!-- SINGLE STAT -->
-                    <div class="stat" data-view="out">
-                        <h4 class="stat-title">Honors <br>&amp; Awards</h4>
-                        <span class="stat-number">8</span>
-                        <img src="images/keanu.gif" class="stat-hover-image">
-                    </div>
-
-                    <!-- SINGLE STAT -->
-                    <div class="stat" data-view="out">
-                        <h4 class="stat-title">Slack <br>Messages</h4>
-                        <span class="stat-number">50k+</span>
-                        <img src="images/slack.gif" class="stat-hover-image">
-                    </div>
-
-                    <!-- SINGLE STAT -->
-                    <div class="stat" data-view="out">
-                        <h4 class="stat-title">github <br>Commits</h4>
-                        <span class="stat-number">3,126</span>
-                        <img src="images/git.gif" class="stat-hover-image">
-                    </div>
-
-                    <!-- SINGLE STAT -->
-                    <div class="stat" data-view="out">
-                        <h4 class="stat-title">Office Plants <br>Perished</h4>
-                        <span class="stat-number">3</span>
-                        <img src="images/plant.gif" class="stat-hover-image">
-                    </div>
-
-                    <!-- SINGLE STAT -->
-                    <div class="stat" data-view="out">
-                        <h4 class="stat-title">New (Amazing) <br>Clients</h4>
-                        <span class="stat-number">5</span>
-                        <img src="images/client.gif" class="stat-hover-image">
-                    </div>
-
-                </div>
-            </section>
-
-            <section class="info-slide" id="section-02">
-                <div class="large-number-horizontal">
-                    <div class="number-wrapper" data-horz-scroll="">
-                        <img class="full-number" src="images/two.svg" alt="Section Two">
-                    </div>
-                </div>
-
-
-
-                <text class="text-top clear active" data-sticky="">
-                    <div class="right">
-                        <p>We had a busy year partnering with friends both old and new. We’re eternally grateful for the
-                            clients we’ve been working with for years, and welcome new relationships we hope to grow.
-                        </p>
-
-                        <p>We stuck with our mission and focus. All of our work was creating brands and digital
-                            experiences - usually together. As usual, we were lucky enough to work in a ton of different
-                            industries like: food tech, education, psychedlic medicine, female entrepreneurship,
-                            hospitality, and real estate.</p>
-                    </div>
-                </text>
-                <div class="text clear">
-                    <div class="left">
-                        <h2>The Things We've Made</h2>
-                    </div>
-                </div>
-            </section>
-
-            <section class="projects" data-scroll-section="">
-
-                <div class="hidden canvas-holder" id="projects_holder" data-canvas="projects"></div>
-
-
-                <!-- TIME EQUITIES -->
-                <div class="project" data-parent="" data-project="tei">
-                    <div class="project-header active" data-sticky="">
-                        <div class="actions">
-                            <a href="https://milkshake.studio/projects/time-equities-inc" target="_blank">Case Study
-                                <img src="images/arrow.svg">
-                            </a>
-                            <a href="https://timeequities.com" target="_blank">See it Live
-                                <img src="images/arrow.svg">
-                            </a>
-                        </div>
-                        <div class="project-title-wrapper filled" data-reveal="">
-                            <h2 class="project-title"
-                                style="white-space: nowrap; display: inline-block; font-size: 209.726px;">Time Equities
-                            </h2>
-                        </div>
-                        <div class="project-title-wrapper outlined">
-                            <h2 class="project-title "
-                                style="white-space: nowrap; display: inline-block; font-size: 209.726px;">Time Equities
-                            </h2>
-                        </div>
-
-                        <div class="text">
-                            <h3>Strategy + Web</h3>
-                            <p>How does a global real estate company re-imagine their digital presence? Lots of
-                                strategy, interviews, and code.</p>
-                        </div>
-                    </div>
-                    <img src="images/tei-2.png" class="hidden project-image" alt="">
-                    <img src="images/tei-3.png" class="hidden project-image" alt="">
-                    <img src="images/tei-1.png" class="hidden project-image" alt="">
-                </div>
-
-                <!-- VOY MEDIA -->
-                <div class="project" data-parent="" data-project="voy">
-                    <div class="project-header active" data-sticky="">
-                        <div class="actions">
-                            <a href="https://milkshake.studio/projects/voy-media" target="_blank">Case Study
-                                <img src="images/arrow.svg">
-                            </a>
-                            <a href="https://voymedia.com" target="_blank">See it Live
-                                <img src="images/arrow.svg">
-                            </a>
-                        </div>
-                        <div class="project-title-wrapper filled" data-reveal="">
-                            <h2 class="project-title"
-                                style="white-space: nowrap; display: inline-block; font-size: 270.4px;">Voy Media</h2>
-                        </div>
-                        <div class="project-title-wrapper outlined">
-                            <h2 class="project-title "
-                                style="white-space: nowrap; display: inline-block; font-size: 270.4px;">Voy Media</h2>
-                        </div>
-                        <div class="text">
-                            <h3>Brand + Web</h3>
-                            <p>Digital advertising doesn’t have to be just numbers and CPMs. We gave Voy Media a strong
-                                identity to tackle bigger fish and make a splash.</p>
-                        </div>
-                    </div>
-                    <img src="images/voy-1.png" class="hidden project-image" alt="">
-                    <img src="images/voy-2.png" class="hidden project-image" alt="">
-                    <img src="images/voy-3.png" class="hidden project-image" alt="">
-                    <img src="images/voy-4.jpg" class="hidden project-image" alt="">
-                </div>
-
-                <!-- CrunchTime -->
-                <div class="project" data-parent="" data-project="crunchtime">
-                    <div class="project-header active" data-sticky="">
-                        <div class="actions">
-                            <a href="https://milkshake.studio/projects/crunchtime" target="_blank">Case Study
-                                <img src="images/arrow-dark.svg">
-                            </a>
-                            <a href="https://crunchtime.com" target="_blank">See it Live
-                                <img src="images/arrow-dark.svg">
-                            </a>
-                        </div>
-                        <div class="project-title-wrapper filled" data-reveal="">
-                            <h2 class="project-title"
-                                style="white-space: nowrap; display: inline-block; font-size: 217.351px;">Crunchtime!
-                            </h2>
-                        </div>
-                        <div class="project-title-wrapper outlined">
-                            <h2 class="project-title "
-                                style="white-space: nowrap; display: inline-block; font-size: 217.351px;">Crunchtime!
-                            </h2>
-                        </div>
-                        <div class="text">
-                            <h3>Strategy + Web</h3>
-                            <p>We gave the legends of food tech a proper website and brand refresh. We’d like to think
-                                we helped get your food delivered faster. </p>
-                        </div>
-                    </div>
-                    <img src="images/crunchtime-1.png" class="hidden project-image" alt="">
-                    <img src="images/crunchtime-2.png" class="hidden project-image" alt="">
-                    <img src="images/crunchtime-3.png" class="hidden project-image" alt="">
-                    <img src="images/crunchtime-4.png" class="hidden project-image" alt="">
-                </div>
-
-
-                <!-- MindBloom -->
-                <div class="project" data-parent="" data-project="mindbloom">
-                    <div class="project-header active" data-sticky="">
-                        <div class="actions">
-                            <a href="https://milkshake.studio/projects/mindbloom" target="_blank">Case Study
-                                <img src="images/arrow-dark.svg">
-                            </a>
-                            <a href="https://mindbloom.co" target="_blank">See it Live
-                                <img src="images/arrow-dark.svg">
-                            </a>
-                        </div>
-                        <div class="project-title-wrapper filled" data-reveal="">
-                            <h2 class="project-title"
-                                style="white-space: nowrap; display: inline-block; font-size: 245.44px;">Mindbloom</h2>
-                        </div>
-                        <div class="project-title-wrapper outlined">
-                            <h2 class="project-title "
-                                style="white-space: nowrap; display: inline-block; font-size: 245.44px;">Mindbloom</h2>
-                        </div>
-                        <div class="text">
-                            <h3>Brand + Web</h3>
-                            <p>We helped the ahead-of-the-curve team at Mindbloom launch psychedelic medicine for the
-                                masses. Glowing reviews all around.</p>
-                        </div>
-                    </div>
-                    <img src="images/mindbloom-1.jpg" class="hidden project-image" alt="">
-                    <img src="images/mindbloom-2.jpg" class="hidden project-image" alt="">
-                    <img src="images/mindbloom-3.png" class="hidden project-image" alt="">
-                    <img src="images/mindbloom-4.png" class="hidden project-image" alt="">
-                </div>
-
-
-                <!-- Oji Life Lab -->
-                <div class="project" data-parent="" data-project="mindbloom">
-                    <div class="project-header active" data-sticky="">
-                        <div class="actions">
-                            <!-- <a href="https://milkshake.studio/projects/mindbloom" target="_blank">Case Study
-                      <img src="images/arrow.svg">
-                   </a> -->
-                            <a href="https://ojilifelab.co" target="_blank">See it Live
-                                <img src="images/arrow.svg">
-                            </a>
-                        </div>
-                        <div class="project-title-wrapper filled" data-reveal="">
-                            <h2 class="project-title"
-                                style="white-space: nowrap; display: inline-block; font-size: 243.939px;">Oji Life Lab
-                            </h2>
-                        </div>
-                        <div class="project-title-wrapper outlined">
-                            <h2 class="project-title "
-                                style="white-space: nowrap; display: inline-block; font-size: 243.939px;">Oji Life Lab
-                            </h2>
-                        </div>
-                        <div class="text">
-                            <h3>Brand, Web, App</h3>
-                            <p>We helped bring emotional intelligence to the masses. A new mobile app for those that
-                                want to conquer their emotions.</p>
-                        </div>
-                    </div>
-                    <img src="images/oji-1.png" class="hidden project-image" alt="">
-                    <img src="images/oji-2.png" class="hidden project-image" alt="">
-                    <img src="images/oji-3.png" class="hidden project-image" alt="">
-                </div>
-
-            </section>
-
-
-            <section class="info-slide hide-on-phone" id="section-03" data-parent="" data-log="true">
-                <canvas id="wave-canvas" data-sticky="" class="active" width="2300" height="1596"></canvas>
-                <div class="hidden canvas-holder" id="three" data-canvas="wave-canvas"></div>
-                <img class="img-number-3 hidden" src="images/three-outlined.png">
-            </section>
-
-            <section id="predictions" class="hide-on-phone">
-
-                <div class="header" data-parent="">
-                    <svg width="802" height="634" viewBox="0 0 802 634" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M193.564 140.529V84.9026C193.564 67.9221 194.149 41.573 175.427 22.8359C160.215 7.61197 135.057 0 98.7829 0C62.5087 0 37.9359 7.61197 22.1391 22.8359C3.41696 41.573 4.00202 67.9221 4.00202 84.9026V163.364H91.7621V67.9221C91.7621 63.8234 94.6874 60.8957 98.7829 60.8957C102.878 60.8957 105.804 63.8234 105.804 67.9221V146.969C105.804 160.437 103.463 169.805 97.6127 178.003L26.2346 272.86C12.778 291.011 4.00202 306.235 4.00202 331.413V413.388H193.564V345.466H91.7621V329.656C91.7621 323.801 94.1023 316.189 97.6127 311.505L170.161 214.892C186.543 193.227 193.564 173.904 193.564 140.529Z"
-                            fill="#FA4444"></path>
-                        <path
-                            d="M390 336.097V85.4882C390 67.9221 390 42.1586 371.278 23.4214C356.066 7.61197 330.908 0 294.634 0C258.945 0 233.787 7.61197 217.99 23.4214C199.268 42.1586 199.853 67.9221 199.853 85.4882V336.097C199.853 353.078 199.268 379.427 217.99 398.164C233.787 413.388 258.945 421 294.634 421C330.908 421 356.066 413.388 371.278 398.164C390 379.427 390 353.078 390 336.097ZM301.655 353.078C301.655 356.591 298.73 360.104 294.634 360.104C290.539 360.104 287.613 356.591 287.613 353.078V68.5077C287.613 64.4089 290.539 61.4812 294.634 61.4812C298.73 61.4812 301.655 64.4089 301.655 68.5077V353.078Z"
-                            fill="#FA4444"></path>
-                        <path
-                            d="M588.493 361.363V305.803C588.493 288.842 589.077 262.524 570.362 243.809C555.156 228.603 530.008 221 493.747 221C457.487 221 432.923 228.603 417.132 243.809C398.417 262.524 399.002 288.842 399.002 305.803V384.172H486.729V288.842C486.729 284.748 489.653 281.824 493.747 281.824C497.841 281.824 500.765 284.748 500.765 288.842V367.797C500.765 381.248 498.426 390.606 492.578 398.794L421.226 493.539C407.775 511.669 399.002 526.875 399.002 552.024V633.902H588.493V566.06H486.729V550.269C486.729 544.421 489.069 536.818 492.578 532.139L565.099 435.639C581.474 414 588.493 394.7 588.493 361.363Z"
-                            fill="#FA4444"></path>
-                        <path d="M720.41 633.902V228.603H600.516V292.936H632.683V633.902H720.41Z" fill="#FA4444"></path>
-                        <path
-                            d="M451 160.032V163.152H415.016V160.032H451ZM411.792 132.368C411.792 130.011 411.584 128.382 411.168 127.48C410.752 126.51 409.816 125.851 408.36 125.504C406.973 125.088 404.547 124.88 401.08 124.88V122.8H412.832H414.496H426.248V124.88C422.781 124.88 420.32 125.088 418.864 125.504C417.477 125.851 416.576 126.51 416.16 127.48C415.744 128.382 415.536 130.011 415.536 132.368V196.432C415.536 198.79 415.744 200.454 416.16 201.424C416.576 202.326 417.477 202.984 418.864 203.4C420.32 203.747 422.781 203.92 426.248 203.92V206H414.496H412.832H401.08V203.92C404.547 203.92 406.973 203.747 408.36 203.4C409.816 202.984 410.752 202.326 411.168 201.424C411.584 200.454 411.792 198.79 411.792 196.432V132.368ZM448.816 132.368C448.816 130.011 448.608 128.382 448.192 127.48C447.776 126.51 446.84 125.851 445.384 125.504C443.997 125.088 441.571 124.88 438.104 124.88V122.8L449.856 122.8H451.52H463.272V124.88C459.805 124.88 457.344 125.088 455.888 125.504C454.501 125.851 453.6 126.51 453.184 127.48C452.768 128.382 452.56 130.011 452.56 132.368V196.432C452.56 198.79 452.768 200.454 453.184 201.424C453.6 202.326 454.501 202.984 455.888 203.4C457.344 203.747 459.805 203.92 463.272 203.92V206H451.52H449.856H438.104V203.92C441.571 203.92 443.997 203.747 445.384 203.4C446.84 202.984 447.776 202.326 448.192 201.424C448.608 200.454 448.816 198.79 448.816 196.432V132.368Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M490.405 208.08C484.511 208.08 479.346 206.139 474.909 202.256C470.471 198.374 467.074 193.104 464.717 186.448C462.359 179.792 461.181 172.443 461.181 164.4C461.181 156.358 462.359 149.008 464.717 142.352C467.074 135.696 470.471 130.427 474.909 126.544C479.346 122.662 484.511 120.72 490.405 120.72C496.367 120.72 501.533 122.662 505.901 126.544C510.338 130.427 513.735 135.696 516.093 142.352C518.45 149.008 519.629 156.358 519.629 164.4C519.629 172.443 518.45 179.792 516.093 186.448C513.735 193.104 510.338 198.374 505.901 202.256C501.533 206.139 496.367 208.08 490.405 208.08ZM493.941 204.752C498.933 204.336 503.162 202.152 506.629 198.2C510.095 194.248 512.557 189.118 514.013 182.808C515.538 176.499 515.954 169.635 515.261 162.216C514.567 154.798 512.938 148.107 510.373 142.144C507.877 136.112 504.583 131.467 500.493 128.208C496.402 124.95 491.861 123.528 486.869 123.944C481.877 124.43 477.613 126.648 474.077 130.6C470.61 134.483 468.114 139.614 466.589 145.992C465.133 152.302 464.751 159.166 465.445 166.584C466.138 174.003 467.767 180.728 470.333 186.76C472.898 192.723 476.226 197.334 480.317 200.592C484.407 203.851 488.949 205.238 493.941 204.752Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M529.279 206H517.527V203.92C520.994 203.92 523.421 203.747 524.807 203.4C526.263 202.984 527.199 202.326 527.615 201.424C528.031 200.454 528.239 198.79 528.239 196.432V132.368C528.239 130.011 528.031 128.382 527.615 127.48C527.199 126.51 526.263 125.851 524.807 125.504C523.421 125.088 520.994 124.88 517.527 124.88V122.8H529.279L542.903 122.8C550.322 122.8 556.354 124.811 560.999 128.832C565.714 132.784 568.071 138.539 568.071 146.096C568.071 150.88 567.101 154.971 565.159 158.368C563.218 161.696 560.549 164.227 557.151 165.96C553.823 167.694 550.01 168.56 545.711 168.56C541.69 168.56 537.114 167.902 531.983 166.584V196.432C531.983 198.79 532.191 200.454 532.607 201.424C533.023 202.326 533.925 202.984 535.311 203.4C536.767 203.747 539.229 203.92 542.695 203.92V206L530.943 206H529.279ZM545.607 165.44C550.946 165.44 555.314 163.742 558.711 160.344C562.178 156.947 563.911 152.198 563.911 146.096C563.911 141.728 562.941 138.019 560.999 134.968C559.127 131.918 556.597 129.664 553.407 128.208C550.287 126.683 546.786 125.92 542.903 125.92C539.159 125.92 535.519 126.544 531.983 127.792V163.464C534.41 164.158 536.698 164.678 538.847 165.024C540.997 165.302 543.25 165.44 545.607 165.44Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M616.209 124.568L617.769 140.272L615.689 140.48C615.203 135.835 614.683 132.542 614.129 130.6C613.574 128.659 612.777 127.411 611.737 126.856C610.697 126.232 609.033 125.92 606.745 125.92H581.473V160.76H598.737C601.025 160.76 602.654 160.552 603.625 160.136C604.595 159.651 605.254 158.611 605.601 157.016C606.017 155.422 606.225 152.752 606.225 149.008H608.305V161.904V162.736V175.632H606.225C606.225 171.888 606.017 169.219 605.601 167.624C605.254 166.03 604.595 165.024 603.625 164.608C602.654 164.123 601.025 163.88 598.737 163.88H581.473V196.952C581.473 199.379 581.785 200.974 582.409 201.736C583.033 202.499 584.35 202.88 586.361 202.88H607.681C609.969 202.88 611.702 202.534 612.881 201.84C614.059 201.078 615.169 199.518 616.209 197.16C617.318 194.803 618.705 190.851 620.369 185.304L622.345 185.928L616.729 204.544L616.313 206H578.769H567.017V203.92C570.483 203.92 572.91 203.747 574.297 203.4C575.753 202.984 576.689 202.326 577.105 201.424C577.521 200.454 577.729 198.79 577.729 196.432V132.368C577.729 130.011 577.521 128.382 577.105 127.48C576.689 126.51 575.753 125.851 574.297 125.504C572.91 125.088 570.483 124.88 567.017 124.88V122.8H578.769H616.001L616.209 124.568Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M672.576 124.568L674.136 140.272L672.056 140.48C671.571 135.835 671.051 132.542 670.496 130.6C669.941 128.659 669.144 127.411 668.104 126.856C667.064 126.232 665.4 125.92 663.112 125.92H634.72V163.256L651.984 163.256C654.272 163.256 655.901 163.048 656.872 162.632C657.843 162.147 658.501 161.107 658.848 159.512C659.264 157.918 659.472 155.248 659.472 151.504H661.552V164.4V165.232V178.128H659.472C659.472 174.384 659.264 171.715 658.848 170.12C658.501 168.526 657.843 167.52 656.872 167.104C655.901 166.619 654.272 166.376 651.984 166.376L634.72 166.376V196.432C634.72 198.79 634.928 200.454 635.344 201.424C635.76 202.326 636.661 202.984 638.048 203.4C639.504 203.747 641.965 203.92 645.432 203.92V206H633.68H632.016L620.264 206V203.92C623.731 203.92 626.157 203.747 627.544 203.4C629 202.984 629.936 202.326 630.352 201.424C630.768 200.454 630.976 198.79 630.976 196.432V132.368C630.976 130.011 630.768 128.382 630.352 127.48C629.936 126.51 629 125.851 627.544 125.504C626.157 125.088 623.731 124.88 620.264 124.88V122.8L632.016 122.8H672.368L672.576 124.568Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M732.569 132.368C732.569 130.011 732.361 128.382 731.945 127.48C731.529 126.51 730.593 125.851 729.137 125.504C727.75 125.088 725.323 124.88 721.857 124.88V122.8H733.609H734.649H746.401V124.88C742.934 124.88 740.473 125.088 739.017 125.504C737.63 125.851 736.729 126.51 736.313 127.48C735.897 128.382 735.689 130.011 735.689 132.368V181.456C735.689 188.875 733.782 195.184 729.969 200.384C726.225 205.515 719.95 208.08 711.145 208.08C701.369 208.08 694.539 205.55 690.657 200.488C686.774 195.358 684.833 189.014 684.833 181.456V132.368C684.833 130.011 684.625 128.382 684.209 127.48C683.793 126.51 682.857 125.851 681.401 125.504C680.014 125.088 677.587 124.88 674.121 124.88V122.8H685.873H687.537H699.289V124.88C695.822 124.88 693.361 125.088 691.905 125.504C690.518 125.851 689.617 126.51 689.201 127.48C688.785 128.382 688.577 130.011 688.577 132.368V181.456C688.577 189.43 690.449 195.358 694.193 199.24C698.006 203.054 703.657 204.96 711.145 204.96C717.801 204.96 723.035 202.984 726.849 199.032C730.662 195.08 732.569 189.222 732.569 181.456V132.368Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M760.893 122.8H772.645V124.88C769.179 124.88 766.717 125.088 765.261 125.504C763.875 125.851 762.973 126.51 762.557 127.48C762.141 128.382 761.933 130.011 761.933 132.368V196.952C761.933 198.616 762.037 199.864 762.245 200.696C762.522 201.528 763.008 202.118 763.701 202.464C764.395 202.742 765.434 202.88 766.821 202.88H787.413C789.701 202.88 791.4 202.499 792.509 201.736C793.688 200.974 794.728 199.344 795.629 196.848C796.6 194.283 797.778 190.054 799.165 184.16L801.245 184.576L796.565 204.648L796.253 206H759.229H747.477V203.92C750.944 203.92 753.37 203.747 754.757 203.4C756.213 202.984 757.149 202.326 757.565 201.424C757.981 200.454 758.189 198.79 758.189 196.432V132.368C758.189 130.011 757.981 128.382 757.565 127.48C757.149 126.51 756.213 125.851 754.757 125.504C753.37 125.088 750.944 124.88 747.477 124.88V122.8H759.229H760.893Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M52.392 445.568L53.952 461.272L51.872 461.48C51.3866 456.835 50.8666 453.542 50.312 451.6C49.7573 449.659 48.96 448.411 47.92 447.856C46.88 447.232 45.216 446.92 42.928 446.92H14.536L14.536 484.256H31.8C34.088 484.256 35.7173 484.048 36.688 483.632C37.6586 483.147 38.3173 482.107 38.664 480.512C39.08 478.918 39.288 476.248 39.288 472.504H41.368V485.4V486.232V499.128H39.288C39.288 495.384 39.08 492.715 38.664 491.12C38.3173 489.526 37.6586 488.52 36.688 488.104C35.7173 487.619 34.088 487.376 31.8 487.376H14.536L14.536 517.432C14.536 519.79 14.744 521.454 15.16 522.424C15.576 523.326 16.4773 523.984 17.864 524.4C19.32 524.747 21.7813 524.92 25.248 524.92V527H13.496H11.832H0.0799561L0.0799561 524.92C3.54662 524.92 5.97329 524.747 7.35996 524.4C8.81596 523.984 9.75196 523.326 10.168 522.424C10.584 521.454 10.792 519.79 10.792 517.432L10.792 453.368C10.792 451.011 10.584 449.382 10.168 448.48C9.75196 447.51 8.81596 446.851 7.35996 446.504C5.97329 446.088 3.54662 445.88 0.0799561 445.88L0.0799561 443.8H11.832H52.184L52.392 445.568Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M82.0921 529.08C76.1987 529.08 71.0334 527.139 66.5961 523.256C62.1588 519.374 58.7614 514.104 56.4041 507.448C54.0467 500.792 52.8681 493.443 52.8681 485.4C52.8681 477.358 54.0467 470.008 56.4041 463.352C58.7614 456.696 62.1588 451.427 66.5961 447.544C71.0334 443.662 76.1987 441.72 82.0921 441.72C88.0547 441.72 93.2201 443.662 97.5881 447.544C102.025 451.427 105.423 456.696 107.78 463.352C110.137 470.008 111.316 477.358 111.316 485.4C111.316 493.443 110.137 500.792 107.78 507.448C105.423 514.104 102.025 519.374 97.5881 523.256C93.2201 527.139 88.0547 529.08 82.0921 529.08ZM85.6281 525.752C90.6201 525.336 94.8494 523.152 98.3161 519.2C101.783 515.248 104.244 510.118 105.7 503.808C107.225 497.499 107.641 490.635 106.948 483.216C106.255 475.798 104.625 469.107 102.06 463.144C99.5641 457.112 96.2708 452.467 92.1801 449.208C88.0894 445.95 83.5481 444.528 78.5561 444.944C73.5641 445.43 69.3001 447.648 65.7641 451.6C62.2974 455.483 59.8014 460.614 58.2761 466.992C56.8201 473.302 56.4387 480.166 57.1321 487.584C57.8254 495.003 59.4547 501.728 62.0201 507.76C64.5854 513.723 67.9134 518.334 72.0041 521.592C76.0947 524.851 80.6361 526.238 85.6281 525.752Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M120.967 527H109.215V524.92C112.682 524.92 115.108 524.747 116.495 524.4C117.951 523.984 118.887 523.326 119.303 522.424C119.719 521.454 119.927 519.79 119.927 517.432L119.927 453.368C119.927 451.011 119.719 449.382 119.303 448.48C118.887 447.51 117.951 446.851 116.495 446.504C115.108 446.088 112.682 445.88 109.215 445.88V443.8H120.967H133.031C139.687 443.8 144.991 445.568 148.943 449.104C152.964 452.571 154.975 457.598 154.975 464.184C154.975 469.939 153.519 474.411 150.607 477.6C147.764 480.79 144.228 482.974 139.999 484.152C135.839 485.262 131.436 485.816 126.791 485.816H123.671L123.671 517.432C123.671 519.79 123.879 521.454 124.295 522.424C124.711 523.326 125.612 523.984 126.999 524.4C128.455 524.747 130.916 524.92 134.383 524.92V527H122.631H120.967ZM150.815 464.184C150.815 458.707 149.151 454.478 145.823 451.496C142.564 448.446 138.3 446.92 133.031 446.92C129.287 446.92 126.167 447.544 123.671 448.792V482.696H126.791C132.823 482.766 138.335 481.483 143.327 478.848C148.319 476.214 150.815 471.326 150.815 464.184ZM150.815 518.472C152.202 521.176 153.588 522.944 154.975 523.776C156.431 524.539 158.684 524.92 161.735 524.92V527H154.143C153.172 527 152.41 526.896 151.855 526.688C151.3 526.48 150.746 526.064 150.191 525.44C149.706 524.747 149.082 523.638 148.319 522.112L129.495 485.608L132.719 485.504V485.816C133.204 486.232 133.724 486.787 134.279 487.48C134.834 488.174 135.388 488.971 135.943 489.872C136.567 490.774 137.122 491.675 137.607 492.576L150.815 518.472Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M210.835 443.8V517.432C210.835 519.79 211.043 521.454 211.459 522.424C211.875 523.326 212.776 523.984 214.163 524.4C215.619 524.747 218.08 524.92 221.547 524.92V527H209.795H208.131H196.379V524.92C199.846 524.92 202.272 524.747 203.659 524.4C205.115 523.984 206.051 523.326 206.467 522.424C206.883 521.454 207.091 519.79 207.091 517.432V443.8H210.835ZM207.091 443.8V446.92H192.531C190.243 446.92 188.579 447.232 187.539 447.856C186.499 448.411 185.702 449.728 185.147 451.808C184.592 453.819 184.072 457.216 183.587 462L181.507 461.792L183.067 445.464L183.275 443.8H207.091ZM234.859 445.464L236.419 461.792L234.339 462C233.854 457.216 233.334 453.819 232.779 451.808C232.224 449.728 231.427 448.411 230.387 447.856C229.347 447.232 227.683 446.92 225.395 446.92H210.835V443.8H234.651L234.859 445.464Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M286.377 481.032V484.152H250.393V481.032H286.377ZM247.169 453.368C247.169 451.011 246.961 449.382 246.545 448.48C246.129 447.51 245.193 446.851 243.737 446.504C242.35 446.088 239.923 445.88 236.457 445.88V443.8H248.209H249.873H261.625V445.88C258.158 445.88 255.697 446.088 254.241 446.504C252.854 446.851 251.953 447.51 251.537 448.48C251.121 449.382 250.913 451.011 250.913 453.368V517.432C250.913 519.79 251.121 521.454 251.537 522.424C251.953 523.326 252.854 523.984 254.241 524.4C255.697 524.747 258.158 524.92 261.625 524.92V527H249.873H248.209H236.457V524.92C239.923 524.92 242.35 524.747 243.737 524.4C245.193 523.984 246.129 523.326 246.545 522.424C246.961 521.454 247.169 519.79 247.169 517.432V453.368ZM284.193 453.368C284.193 451.011 283.985 449.382 283.569 448.48C283.153 447.51 282.217 446.851 280.761 446.504C279.374 446.088 276.947 445.88 273.481 445.88V443.8H285.233H286.897H298.649V445.88C295.182 445.88 292.721 446.088 291.265 446.504C289.878 446.851 288.977 447.51 288.561 448.48C288.145 449.382 287.937 451.011 287.937 453.368V517.432C287.937 519.79 288.145 521.454 288.561 522.424C288.977 523.326 289.878 523.984 291.265 524.4C292.721 524.747 295.182 524.92 298.649 524.92V527H286.897H285.233H273.481V524.92C276.947 524.92 279.374 524.747 280.761 524.4C282.217 523.984 283.153 523.326 283.569 522.424C283.985 521.454 284.193 519.79 284.193 517.432V453.368Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M348.849 445.568L350.409 461.272L348.329 461.48C347.844 456.835 347.324 453.542 346.769 451.6C346.214 449.659 345.417 448.411 344.377 447.856C343.337 447.232 341.673 446.92 339.385 446.92H314.113V481.76H331.377C333.665 481.76 335.294 481.552 336.265 481.136C337.235 480.651 337.894 479.611 338.241 478.016C338.657 476.422 338.865 473.752 338.865 470.008H340.945V482.904V483.736V496.632H338.865C338.865 492.888 338.657 490.219 338.241 488.624C337.894 487.03 337.235 486.024 336.265 485.608C335.294 485.123 333.665 484.88 331.377 484.88H314.113V517.952C314.113 520.379 314.425 521.974 315.049 522.736C315.673 523.499 316.99 523.88 319.001 523.88H340.321C342.609 523.88 344.342 523.534 345.521 522.84C346.7 522.078 347.809 520.518 348.849 518.16C349.958 515.803 351.345 511.851 353.009 506.304L354.985 506.928L349.369 525.544L348.953 527H311.409H299.657V524.92C303.123 524.92 305.55 524.747 306.937 524.4C308.393 523.984 309.329 523.326 309.745 522.424C310.161 521.454 310.369 519.79 310.369 517.432V453.368C310.369 451.011 310.161 449.382 309.745 448.48C309.329 447.51 308.393 446.851 306.937 446.504C305.55 446.088 303.123 445.88 299.657 445.88V443.8H311.409H348.641L348.849 445.568Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M52.392 549.568L53.952 565.272L51.872 565.48C51.3866 560.835 50.8666 557.542 50.312 555.6C49.7573 553.659 48.96 552.411 47.92 551.856C46.88 551.232 45.216 550.92 42.928 550.92H14.536L14.536 588.256H31.8C34.088 588.256 35.7173 588.048 36.688 587.632C37.6586 587.147 38.3173 586.107 38.664 584.512C39.08 582.918 39.288 580.248 39.288 576.504H41.368V589.4V590.232L41.368 603.128H39.288C39.288 599.384 39.08 596.715 38.664 595.12C38.3173 593.526 37.6586 592.52 36.688 592.104C35.7173 591.619 34.088 591.376 31.8 591.376H14.536L14.536 621.432C14.536 623.79 14.744 625.454 15.16 626.424C15.576 627.326 16.4773 627.984 17.864 628.4C19.32 628.747 21.7813 628.92 25.248 628.92L25.248 631H13.496H11.832H0.0799561L0.0799561 628.92C3.54662 628.92 5.97329 628.747 7.35996 628.4C8.81596 627.984 9.75196 627.326 10.168 626.424C10.584 625.454 10.792 623.79 10.792 621.432L10.792 557.368C10.792 555.011 10.584 553.382 10.168 552.48C9.75196 551.51 8.81596 550.851 7.35996 550.504C5.97329 550.088 3.54662 549.88 0.0799561 549.88L0.0799561 547.8H11.832H52.184L52.392 549.568Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M112.385 557.368C112.385 555.011 112.177 553.382 111.761 552.48C111.345 551.51 110.409 550.851 108.953 550.504C107.566 550.088 105.139 549.88 101.673 549.88V547.8H113.425H114.465H126.217V549.88C122.75 549.88 120.289 550.088 118.833 550.504C117.446 550.851 116.545 551.51 116.129 552.48C115.713 553.382 115.505 555.011 115.505 557.368L115.505 606.456C115.505 613.875 113.598 620.184 109.785 625.384C106.041 630.515 99.7659 633.08 90.9605 633.08C81.1845 633.08 74.3552 630.55 70.4725 625.488C66.5899 620.358 64.6485 614.014 64.6485 606.456L64.6485 557.368C64.6485 555.011 64.4405 553.382 64.0245 552.48C63.6085 551.51 62.6725 550.851 61.2165 550.504C59.8299 550.088 57.4032 549.88 53.9365 549.88V547.8H65.6885H67.3525H79.1045V549.88C75.6379 549.88 73.1765 550.088 71.7205 550.504C70.3339 550.851 69.4325 551.51 69.0165 552.48C68.6005 553.382 68.3925 555.011 68.3925 557.368L68.3925 606.456C68.3925 614.43 70.2645 620.358 74.0085 624.24C77.8219 628.054 83.4725 629.96 90.9605 629.96C97.6165 629.96 102.851 627.984 106.665 624.032C110.478 620.08 112.385 614.222 112.385 606.456L112.385 557.368Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M156.645 547.8V621.432C156.645 623.79 156.853 625.454 157.269 626.424C157.685 627.326 158.587 627.984 159.973 628.4C161.429 628.747 163.891 628.92 167.357 628.92V631H155.605H153.941H142.189V628.92C145.656 628.92 148.083 628.747 149.469 628.4C150.925 627.984 151.861 627.326 152.277 626.424C152.693 625.454 152.901 623.79 152.901 621.432V547.8H156.645ZM152.901 547.8V550.92H138.341C136.053 550.92 134.389 551.232 133.349 551.856C132.309 552.411 131.512 553.728 130.957 555.808C130.403 557.819 129.883 561.216 129.397 566L127.317 565.792L128.877 549.464L129.085 547.8H152.901ZM180.669 549.464L182.229 565.792L180.149 566C179.664 561.216 179.144 557.819 178.589 555.808C178.035 553.728 177.237 552.411 176.197 551.856C175.157 551.232 173.493 550.92 171.205 550.92H156.645V547.8H180.461L180.669 549.464Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M242.746 557.368C242.746 555.011 242.538 553.382 242.122 552.48C241.706 551.51 240.77 550.851 239.314 550.504C237.927 550.088 235.501 549.88 232.034 549.88V547.8H243.786H244.826H256.578V549.88C253.111 549.88 250.65 550.088 249.194 550.504C247.807 550.851 246.906 551.51 246.49 552.48C246.074 553.382 245.866 555.011 245.866 557.368V606.456C245.866 613.875 243.959 620.184 240.146 625.384C236.402 630.515 230.127 633.08 221.322 633.08C211.546 633.08 204.717 630.55 200.834 625.488C196.951 620.358 195.01 614.014 195.01 606.456V557.368C195.01 555.011 194.802 553.382 194.386 552.48C193.97 551.51 193.034 550.851 191.578 550.504C190.191 550.088 187.765 549.88 184.298 549.88V547.8H196.05H197.714H209.466V549.88C205.999 549.88 203.538 550.088 202.082 550.504C200.695 550.851 199.794 551.51 199.378 552.48C198.962 553.382 198.754 555.011 198.754 557.368V606.456C198.754 614.43 200.626 620.358 204.37 624.24C208.183 628.054 213.834 629.96 221.322 629.96C227.978 629.96 233.213 627.984 237.026 624.032C240.839 620.08 242.746 614.222 242.746 606.456V557.368Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M269.407 631H257.655V628.92C261.121 628.92 263.548 628.747 264.935 628.4C266.391 627.984 267.327 627.326 267.743 626.424C268.159 625.454 268.367 623.79 268.367 621.432L268.367 557.368C268.367 555.011 268.159 553.382 267.743 552.48C267.327 551.51 266.391 550.851 264.935 550.504C263.548 550.088 261.121 549.88 257.655 549.88V547.8H269.407H281.471C288.127 547.8 293.431 549.568 297.383 553.104C301.404 556.571 303.415 561.598 303.415 568.184C303.415 573.939 301.959 578.411 299.047 581.6C296.204 584.79 292.668 586.974 288.439 588.152C284.279 589.262 279.876 589.816 275.231 589.816H272.111L272.111 621.432C272.111 623.79 272.319 625.454 272.735 626.424C273.151 627.326 274.052 627.984 275.439 628.4C276.895 628.747 279.356 628.92 282.823 628.92V631H271.071H269.407ZM299.255 568.184C299.255 562.707 297.591 558.478 294.263 555.496C291.004 552.446 286.74 550.92 281.471 550.92C277.727 550.92 274.607 551.544 272.111 552.792V586.696H275.231C281.263 586.766 286.775 585.483 291.767 582.848C296.759 580.214 299.255 575.326 299.255 568.184ZM299.255 622.472C300.641 625.176 302.028 626.944 303.415 627.776C304.871 628.539 307.124 628.92 310.175 628.92V631H302.583C301.612 631 300.849 630.896 300.295 630.688C299.74 630.48 299.185 630.064 298.631 629.44C298.145 628.747 297.521 627.638 296.759 626.112L277.935 589.608L281.159 589.504V589.816C281.644 590.232 282.164 590.787 282.719 591.48C283.273 592.174 283.828 592.971 284.383 593.872C285.007 594.774 285.561 595.675 286.047 596.576L299.255 622.472Z"
-                            fill="#F5F1EE"></path>
-                        <path
-                            d="M360.399 549.568L361.959 565.272L359.879 565.48C359.393 560.835 358.873 557.542 358.319 555.6C357.764 553.659 356.967 552.411 355.927 551.856C354.887 551.232 353.223 550.92 350.935 550.92H325.663V585.76H342.927C345.215 585.76 346.844 585.552 347.815 585.136C348.785 584.651 349.444 583.611 349.791 582.016C350.207 580.422 350.415 577.752 350.415 574.008H352.495V586.904V587.736V600.632H350.415C350.415 596.888 350.207 594.219 349.791 592.624C349.444 591.03 348.785 590.024 347.815 589.608C346.844 589.123 345.215 588.88 342.927 588.88H325.663L325.663 621.952C325.663 624.379 325.975 625.974 326.599 626.736C327.223 627.499 328.54 627.88 330.551 627.88H351.871C354.159 627.88 355.892 627.534 357.071 626.84C358.249 626.078 359.359 624.518 360.399 622.16C361.508 619.803 362.895 615.851 364.559 610.304L366.535 610.928L360.919 629.544L360.503 631H322.959H311.207V628.92C314.673 628.92 317.1 628.747 318.487 628.4C319.943 627.984 320.879 627.326 321.295 626.424C321.711 625.454 321.919 623.79 321.919 621.432L321.919 557.368C321.919 555.011 321.711 553.382 321.295 552.48C320.879 551.51 319.943 550.851 318.487 550.504C317.1 550.088 314.673 549.88 311.207 549.88V547.8H322.959H360.191L360.399 549.568Z"
-                            fill="#F5F1EE"></path>
-                    </svg>
-                    <div class="text active" data-sticky="">
-                        <p>What does the future hold? Can it get worse? Will it hopefully get better? We honestly have
-                            no idea.</p>
-                        <p>However, we put together a few predictions for the coming year. Some are realistic, and
-                            others are downright horrible (filler), but nonetheless, we wish you all a happy new year.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="prediction-cards clear" style="height: 1276.02px;">
-                    <!-- CARD -->
-                    <div class="card">
-                        <div class="title">
-                            <h3>Covid-19</h3>
-                        </div>
-                        <div class="text">
-                            <p>After a vaccine is finally approved and distributed globally, we begin to see a decline
-                                in infections, hospitalizations, and death.</p>
-                            <p>Unfortunately, Apple ended up being the source of the outbreak after an extensive
-                                investigation.They plan on releasing COVID-19 Pro and COVID-19 Pro Max in 2021.</p>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="card">
-                        <div class="title">
-                            <h3>Fashion</h3>
-                        </div>
-                        <div class="text">
-                            <p>Athleisure finally puts an end to every other fashion trend. Levi’s and Big Demin all go
-                                bankrupt overnight, leaving a vacuum for sweatpants makers everywhere.</p>
-                            <p>The company that creates Wedding Attire out of sweatpants has explosive growth,
-                                eventually unseating Tesla as the world’s most overvalued company.</p>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="card">
-                        <div class="title">
-                            <h3>Stock Market</h3>
-                        </div>
-                        <div class="text">
-                            <p>After a head-to-head battle between cryptocurrency and traditional stocks, money as we
-                                know it becomes about as useful as the UN.</p>
-                            <p>We begin to rely on bartering, much like a global Burning Man. Our training during the
-                                pandemic left us well-equipped to hoard commodities like toilet paper and toothpaste.
-                                Amazingly, the economy has never been stronger.</p>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="card">
-                        <div class="title">
-                            <h3>The Internet</h3>
-                        </div>
-                        <div class="text">
-                            <p>The long-game finally pays off. The internet, once heralded as the future of humanity,
-                                did its final bidding and destroyed society from within itself. Misinformation, deep
-                                fakes, and endless newsletter popups for 10% off rendered humanity useless.</p>
-                            <p>Our last hope, unplugging the damn thing, became impossible after the only man to do it
-                                decided to go hang gliding in a hurricane. A selfish yet thrilling mistake.</p>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <!-- <div class="card">
-                <div class="title">
-                   <h3>Recycling</h3>
-                </div>
-                <div class="text">
-                   <p>Boxed beer goes global.</p>
-                </div>
-             </div> -->
-
-                    <!-- CARD -->
-                    <div class="card">
-                        <div class="title">
-                            <h3>Outer Space</h3>
-                        </div>
-                        <div class="text">
-                            <p>We finally contact intelligent life in our solar system. The news sends Earth into an
-                                even larger tailspin. Chaos ensues. We’re told to keep calm and carry on, but we’re
-                                glued to CNN’s TikTok to hear more about our extraterrestrial brethren.</p>
-                            <p>The transmission ends up being an ad for alien deodorant called Astrostick®, sold
-                                directly to the consumer and made from only recycled materials. Upon hearing this, we
-                                ignore it and move along our daily lives - slightly more annoyed than before.</p>
-                        </div>
-                    </div>
-                    <!-- CARD -->
-                    <div class="card">
-                        <div class="title">
-                            <h3>Weddings</h3>
-                        </div>
-                        <div class="text">
-                            <p>Weddings go one of two ways for you – Absolute pure jubilation. Pure chaos. Pure ecstacy.
-                                Before someone is telling you who they are and how they know the bride or groom, you’re
-                                putting a shot in their hand. Mr. Brightside or Sex is on Fire come on, or the band
-                                plays Run Around Sue, or the DJ plays WAP and you are literally parking your mack truck
-                                in every persons garage.</p>
-                            <p>Or, you aren’t doing any of those things. Because you aren’t going to weddings. Because
-                                who the hell isn’t cancelling their wedding again? Selfish.</p>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="card">
-                        <div class="title">
-                            <h3>Pantone 17-5104</h3>
-                        </div>
-                        <div class="text">
-                            <p>No one uses this color once. There is no such thing as “Ultimate Gray”. There’s
-                                change-of-pace gray, and background gray, and foggy gray, and grey, and gunmetal grey.
-                                But that’s enough grays. I’m looking in the #F0F0F0 to #FAFAFA range, or I’m using black
-                                at different opacities, but not Ultimate Gray. There is nothing strong or positive or
-                                thoughtful or ultimate about it. Sorry, Ernst and Young, but no.</p>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="card">
-                        <div class="title">
-                            <h3>Senate Runoff</h3>
-                        </div>
-                        <div class="text">
-                            <p>In a surprise turn of events, in the Warnock/Loeffler race, 63% of people write in Andre
-                                3000 and in the Ossoff/Perdue race, 56% write in Big Boi. Outkast is back baby! The
-                                south has got something to say!” Andre exclaims. Big Boi looks out at the victory crowd,
-                                “Tapes, CDs, baby please, you make me want to scream, you’re on my team starting first
-                                string so why are we arguing?” Everyone goes nuts.</p>
-                        </div>
-                    </div>
-
-                    <!-- CARD -->
-                    <div class="card">
-                        <div class="title">
-                            <h3>Social Media</h3>
-                        </div>
-                        <div class="text">
-                            <p>Facebook gets broken up, Instagram is sold off and the new buyer returns the feed to the
-                                chronological timeline. Augmented Reality goggles go mainstream and now you can’t see
-                                anyone’s mouths or eyes. DMVs in most states will still not let you renew your license
-                                online. </p>
-                            <p>TikTok gains so much momentum that quartely investor calls are now done in 15 second
-                                dance clips.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <footer id="footer">
-                <div class="left">
-                    <div class="social">
-                        <a href="https://instagram.com/milkshake_bk" target="_blank" rel="noopener noreferrer">
-                            <img src="images/instagram.svg" alt="Instagram">
-                        </a>
-                        <a href="https://dribbble.com/milkshake_studio" target="_blank" rel="noopener noreferrer">
-                            <img src="images/dribbble.svg" alt="dribbble">
-                        </a>
-                    </div>
-                    <h3>That’s all, folks!</h3>
-                </div>
-                <div class="right">
-                    <span>Created by</span>
-                    <a href="https://milkshake.studio" target="_blank">
-                        <img src="images/logo-white.svg" alt="Milkshake Studio">
-                    </a>
-                </div>
-            </footer>
-
-        </div>
-    </main>
-
-    <div id="controls">
-        <div class="navigate">
-            <div class="next">
-                <svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M52.0066 75L69.0067 58L70.0001 57.0858L69.0067 56.1716L52.0067 39.1716L49.1782 42L64.264 57.0858L49.1782 72.1716L52.0066 75Z"
-                        fill="white"></path>
-                    <circle cx="57" cy="57" r="56" transform="rotate(-180 57 57)" stroke="white"></circle>
-                </svg>
-            </div>
-
-            <div class="previous">
-                <svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M61.9934 39L44.9934 56L43.9999 56.9142L44.9934 57.8284L61.9933 74.8284L64.8218 72L49.736 56.9142L64.8218 41.8284L61.9934 39Z"
-                        fill="white"></path>
-                    <circle cx="57" cy="57" r="56" stroke="white"></circle>
-                </svg>
-            </div>
-        </div>
-
-
-        <div class="close">
-            <svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="57" cy="57" r="56" stroke="white"></circle>
-                <path d="M46 46L68.5 68.5" stroke="white" stroke-width="4" stroke-linejoin="round"></path>
-                <path d="M68.5 46L46 68.5" stroke="white" stroke-width="4" stroke-linejoin="round"></path>
-            </svg>
-        </div>
-    </div>
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script type="text/javascript" async=""
-        src="https://www.googletagmanager.com/gtag/js?id=G-CM3C4JKTGR&amp;l=dataLayer&amp;cx=c"></script>
-    <script src="./lib/pathseg.js"></script>
-    <script src="./lib/decomp.js"></script>
-    <script src="./app.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-40410132-2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        const THICCNESS = 60;
+        const SVG_PATH_SELECTOR = "path";
+        const SVG_WIDTH_IN_PX = 26.699;
+        const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.2;
 
-        gtag('config', 'UA-40410132-2');
+        const matterContainer = document.querySelector("#matter-container");
+        const loadingElement = document.querySelector("#loading");
+
+        // module aliases
+        var Engine = Matter.Engine,
+            Render = Matter.Render,
+            Runner = Matter.Runner,
+            Bodies = Matter.Bodies,
+            Composite = Matter.Composite,
+            Body = Matter.Body,
+            Svg = Matter.Svg,
+            Vector = Matter.Vector,
+            Vertices = Matter.Vertices;
+
+        // create an engine
+        var engine = Engine.create();
+
+        // create a renderer
+        var render = Render.create({
+            element: matterContainer,
+            engine: engine,
+            options: {
+                width: matterContainer.clientWidth,
+                height: matterContainer.clientHeight,
+                background: "transparent",
+                wireframes: false,
+                showAngleIndicator: false,
+                showBounds: false
+            }
+        });
+
+        var ground = Bodies.rectangle(
+            matterContainer.clientWidth / 2,
+            matterContainer.clientHeight + THICCNESS / 2,
+            matterContainer.clientWidth,
+            THICCNESS,
+            {
+                isStatic: true,
+                render: { strokeStyle: 'transparent' }
+            }
+        );
+
+        let leftWall = Bodies.rectangle(
+            0 - THICCNESS / 2,
+            matterContainer.clientHeight / 2,
+            THICCNESS,
+            matterContainer.clientHeight,
+            {
+                isStatic: true,
+                render: { strokeStyle: 'transparent' }
+            }
+        );
+
+        let rightWall = Bodies.rectangle(
+            matterContainer.clientWidth + THICCNESS / 2,
+            matterContainer.clientHeight / 2,
+            THICCNESS,
+            matterContainer.clientHeight,
+            {
+                isStatic: true,
+                render: { strokeStyle: 'transparent' }
+            }
+        );
+
+        // add all of the bodies to the world
+        Composite.add(engine.world, [ground, leftWall, rightWall]);
+
+        let mouse = Matter.Mouse.create(render.canvas);
+        let mouseConstraint = Matter.MouseConstraint.create(engine, {
+            mouse: mouse,
+            constraint: {
+                stiffness: 0.2,
+                render: {
+                    visible: false
+                }
+            }
+        });
+
+        Composite.add(engine.world, mouseConstraint);
+
+        // allow scroll through the canvas
+        mouseConstraint.mouse.element.removeEventListener(
+            "mousewheel",
+            mouseConstraint.mouse.mousewheel
+        );
+        mouseConstraint.mouse.element.removeEventListener(
+            "DOMMouseScroll",
+            mouseConstraint.mouse.mousewheel
+        );
+
+        // run the renderer
+        Render.run(render);
+
+        // create runner
+        var runner = Runner.create();
+
+        // run the engine
+        Runner.run(runner, engine);
+        console.log(Composite.allBodies(engine.world));
+
+        // 물체를 랜덤하게 떨어뜨리는 함수
+        function createSvgBodiesRandomly() {
+            const paths = document.querySelectorAll(SVG_PATH_SELECTOR);
+            paths.forEach((path, index) => {
+                const delay = Math.random() * 7000; // 0초에서 7초 사이의 무작위 시간 간격
+
+                setTimeout(() => {
+                    let vertices = Svg.pathToVertices(path, 30); // tolerance 값을 추가하여 정점 데이터 생성
+                    let scaleFactor = (matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / SVG_WIDTH_IN_PX;
+                    vertices = Vertices.scale(vertices, scaleFactor, scaleFactor);
+                    let svgBody = Bodies.fromVertices(
+                        matterContainer.clientWidth * Math.random(), // 무작위 x 위치
+                        matterContainer.clientHeight * Math.random() / 4, // 무작위 y 위치 (상단 1/4 범위 내)
+                        vertices,
+                        {
+                            friction: 0.3,
+                            frictionAir: 0.00001,
+                            restitution: 0.8,
+                            render: {
+                                fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16), // 무작위 색상
+                                strokeStyle: '#000',
+                                lineWidth: 2
+                            }
+                        }
+                    );
+                    Composite.add(engine.world, svgBody);
+                }, delay);
+            });
+        }
+
+        function scaleBodies() {
+            const allBodies = Composite.allBodies(engine.world);
+
+            allBodies.forEach((body) => {
+                if (body.isStatic === true) return;
+                const { min, max } = body.bounds;
+                const bodyWidth = max.x - min.x;
+                let scaleFactor = (matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / bodyWidth;
+
+                Body.scale(body, scaleFactor, scaleFactor);
+            });
+        }
+
+        function handleResize(matterContainer) {
+            render.canvas.width = matterContainer.clientWidth;
+            render.canvas.height = matterContainer.clientHeight;
+
+            Body.setPosition(
+                ground,
+                Vector.create(matterContainer.clientWidth / 2, matterContainer.clientHeight + THICCNESS / 2)
+            );
+
+            Body.setPosition(
+                rightWall,
+                Vector.create(matterContainer.clientWidth + THICCNESS / 2, matterContainer.clientHeight / 2)
+            );
+
+            scaleBodies();
+        }
+
+        window.addEventListener("resize", () => handleResize(matterContainer));
+
+        // 로딩 표시 및 물체를 랜덤하게 떨어뜨리기 시작
+        function startLoading() {
+            loadingElement.style.display = "block";
+            setTimeout(() => {
+                loadingElement.style.display = "none";
+                createSvgBodiesRandomly();
+            }, 3000); // 3초 동안 로딩 표시
+        }
+
+        // 로딩 시작
+        startLoading();
     </script>
 
 </body>

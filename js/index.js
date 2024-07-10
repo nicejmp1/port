@@ -1,5 +1,5 @@
 const THICCNESS = 60;
-const SVG_PATH_SELECTOR = ["#matter-path"];
+const SVG_PATH_SELECTOR = [".matter-path"];
 const SVG_WIDTH_IN_PX = 100;
 const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.2;
 
@@ -106,7 +106,7 @@ console.log(Composite.allBodies(engine.world));
 function createSvgBodiesRandomly() {
     const paths = document.querySelectorAll(SVG_PATH_SELECTOR);
     paths.forEach((path, index) => {
-        const delay = Math.random() * 7000; // 0초에서 5초 사이의 무작위 시간 간격
+        const delay = Math.random() * 11000;
 
         setTimeout(() => {
             let vertices = Svg.pathToVertices(path);
@@ -121,9 +121,9 @@ function createSvgBodiesRandomly() {
                     frictionAir: 0.00001,
                     restitution: 0.8,
                     render: {
-                        fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16), // 무작위 색상
-                        strokeStyle: 'transparent',
-                        lineWidth: 0
+                        // fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16), // 무작위 색상
+                        strokeStyle: '#000',
+                        lineWidth: 2
                     }
                 }
             );

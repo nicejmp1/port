@@ -1,6 +1,6 @@
 const THICCNESS = 60;
-const SVG_PATH_SELECTOR = ["#matter-path"];
-const SVG_WIDTH_IN_PX = 100;
+const SVG_SELECTOR = "#matter"; // SVG 전체를 선택하기 위한 셀렉터
+const SVG_WIDTH_IN_PX = 26.699; // SVG 원래 너비
 const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.2;
 
 const matterContainer = document.querySelector("#matter-container");
@@ -104,32 +104,38 @@ console.log(Composite.allBodies(engine.world));
 
 // 물체를 랜덤하게 떨어뜨리는 함수
 function createSvgBodiesRandomly() {
-    const paths = document.querySelectorAll(SVG_PATH_SELECTOR);
-    paths.forEach((path, index) => {
-        const delay = Math.random() * 7000; // 0초에서 5초 사이의 무작위 시간 간격
+    const svgElement = document.querySelector(SVG_SELECTOR);
+    if (svgElement) {
+        const delay = Math.random() * 7000; // 0초에서 7초 사이의 무작위 시간 간격
 
         setTimeout(() => {
-            let vertices = Svg.pathToVertices(path);
-            let scaleFactor = (matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / SVG_WIDTH_IN_PX;
-            vertices = Vertices.scale(vertices, scaleFactor, scaleFactor);
+            let vertexSets = [];
+            const paths = svgElement.querySelectorAll('path');
+            paths.forEach(path => {
+                let vertices = Svg.pathToVertices(path);
+                let scaleFactor = (matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH) / SVG_WIDTH_IN_PX;
+                vertices = Vertices.scale(vertices, scaleFactor, scaleFactor);
+                vertexSets.push(vertices);
+            });
+
             let svgBody = Bodies.fromVertices(
                 matterContainer.clientWidth * Math.random(), // 무작위 x 위치
                 matterContainer.clientHeight * Math.random() / 4, // 무작위 y 위치 (상단 1/4 범위 내)
-                [vertices],
+                vertexSets,
                 {
                     friction: 0.3,
                     frictionAir: 0.00001,
                     restitution: 0.8,
                     render: {
                         fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16), // 무작위 색상
-                        strokeStyle: 'transparent',
-                        lineWidth: 0
+                        strokeStyle: '#000',
+                        lineWidth: 2
                     }
                 }
             );
             Composite.add(engine.world, svgBody);
         }, delay);
-    });
+    }
 }
 
 function scaleBodies() {
@@ -166,4 +172,3 @@ window.addEventListener("resize", () => handleResize(matterContainer));
 
 // 물체를 랜덤하게 떨어뜨리기 시작
 createSvgBodiesRandomly();
-
