@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://websfont.github.io/websfont/websfont.css');
+
 
 @font-face {
     font-family: 'Gmarket Sans';
@@ -151,5 +153,14 @@
         url('../../fonts/house/HouseGothicBoldFour.woff') format('woff');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PartizenoRegular";
+    src: url("../../fonts/PartizenoRegular.woff2") format("woff2"),
+        url("../../fonts/PartizenoRegular.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
     font-display: swap;
 }

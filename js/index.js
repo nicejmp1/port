@@ -1,7 +1,7 @@
-const THICCNESS = 60;
+const THICCNESS = 50;
 const SVG_PATH_SELECTOR = [".matter-path"];
-const SVG_WIDTH_IN_PX = 100;
-const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.2;
+const SVG_WIDTH_IN_PX = 50;
+const SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH = 0.1;
 
 const matterContainer = document.querySelector("#matter-container");
 
@@ -32,6 +32,7 @@ var render = Render.create({
         showBounds: false
     }
 });
+createCircle();
 
 var ground = Bodies.rectangle(
     matterContainer.clientWidth / 2,
@@ -106,7 +107,7 @@ console.log(Composite.allBodies(engine.world));
 function createSvgBodiesRandomly() {
     const paths = document.querySelectorAll(SVG_PATH_SELECTOR);
     paths.forEach((path, index) => {
-        const delay = Math.random() * 11000;
+        const delay = Math.random() * 7000; // 0초에서 5초 사이의 무작위 시간 간격
 
         setTimeout(() => {
             let vertices = Svg.pathToVertices(path);
@@ -118,18 +119,39 @@ function createSvgBodiesRandomly() {
                 [vertices],
                 {
                     friction: 0.3,
-                    frictionAir: 0.00001,
+                    frictionAir: 0.001,
                     restitution: 0.8,
                     render: {
                         // fillStyle: "#" + Math.floor(Math.random() * 16777215).toString(16), // 무작위 색상
-                        strokeStyle: '#000',
-                        lineWidth: 2
+                        strokeStyle: '#202022',
+                        lineWidth: 3
                     }
                 }
             );
             Composite.add(engine.world, svgBody);
         }, delay);
     });
+}
+
+function createCircle() {
+    let circleDiameter =
+        matterContainer.clientWidth * SVG_WIDTH_AS_PERCENT_OF_CONTAINER_WIDTH;
+    let circle = Bodies.circle(
+        matterContainer.clientWidth / 2,
+        10,
+        circleDiameter / 2,
+        {
+            friction: 0.3,
+            frictionAir: 0.00001,
+            restitution: 0.8,
+            render: {
+                fillStyle: "#F14C43",
+                strokeStyle: "#202022",
+                lineWidth: 3
+            }
+        }
+    );
+    Composite.add(engine.world, circle);
 }
 
 function scaleBodies() {

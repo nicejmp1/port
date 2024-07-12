@@ -1,6 +1,7 @@
 @import 'fonts.css';
 @import 'reset.css';
 @import 'vars.css';
+@import url('https://websfont.github.io/websfont/websfont.css');
 
 body {
     height: 10000000px;
@@ -20,22 +21,37 @@ svg {
 }
 
 #header {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    justify-content: space-between;
+    width: 100%;
     height: 100vh;
-    background-color: #DAD4D1;
+    background-color: #D7D3D0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    font-family: "PartizenoRegular";
 }
 
 #header .header__title {
-    text-align: center;
-    font-family: var(--fontL);
+    padding: 2rem;
+}
+
+
+#header .header__title h1 {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    font-size: 4vw;
     text-transform: capitalize;
 }
+
+#header .header__title p {
+    font-size: 16px;
+    width: 100%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    font-family: 'heirOfLight';
+    line-height: 1.5;
+}
+
 
 #header .header__title .header__sub {
     font-family: var(--fontG);
@@ -66,50 +82,64 @@ svg {
 
 #section1 .intro-number {
     position: absolute;
-    text-align: right;
+    text-align: center;
     box-sizing: border-box;
     overflow: hidden;
     right: 0;
     left: 0;
-    z-index: 7;
+    z-index: 100;
+    width: 100%;
     height: 100vh;
 }
 
 #section1 .intro-number img {
     height: 95vh;
     max-height: 800px;
-    width: 700px;
-    float: right;
-    margin: 2.5vh 0;
+    max-width: 700px;
+    width: 100%;
     display: block;
 }
 
 #section1 .intro-number.outline {
     position: relative;
-    z-index: 100;
+    z-index: 1500;
     top: 0;
     right: 0;
-    background: transparent;
-    transition: background-color 1s ease-out;
-    /* 배경색 변화 애니메이션 */
 }
 
+/* #section1 .intro-number span {
+    font-size: 10vw;
+}
+
+#section1 .intro-number.outline span {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #f9f6f2;
+    color: transparent;
+} */
+
 #section1 .text {
-    min-height: 160vh;
+    min-height: 120vh;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 200px;
     position: relative;
-    z-index: 100;
+    z-index: 1400;
     color: #f5f1ee;
-    background-image: linear-gradient(to bottom, rgba(35, 35, 38, 0.1) 0%, #202022 70%);
-    background-repeat: repeat-x;
-
-    /* 텍스트 색상 */
+    background-color: var(--bgColor);
 }
+
+/* #section1 .text .bgWrap {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(35, 35, 38, 0.1) 0%, #202022 70%);
+    bottom: 0;
+    right: 0;
+    z-index: 1600;
+} */
 
 #section1 .text .left {
     width: 38.75vw;
@@ -121,14 +151,16 @@ svg {
     letter-spacing: -0.03em;
     line-height: 1;
     text-transform: uppercase;
+    position: relative;
     color: #f5f1ee;
 }
 
+
+
 #section1 .text .right {
     width: 38.75vw;
-    columns: 2;
-    column-count: 2;
-    column-gap: 2vw;
+    display: flex;
+    flex-direction: column;
 }
 
 #section1 .text .right p {
@@ -138,6 +170,30 @@ svg {
     margin: 0 0 16px;
     color: #f5f1ee;
 }
+
+
+#section1 .text .right p em {
+    color: var(--pointColor);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+#section1 .text .right .img {
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+
+#section1 .text .right .img img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+
 
 #section2 {
     width: 100%;
@@ -157,9 +213,8 @@ svg {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    padding: 32px 0;
     border-bottom: 1px solid #657E69;
-    padding: 32px;
+    position: relative;
 }
 
 #section2 .skill .stat h4 {
@@ -176,7 +231,7 @@ svg {
 
 #section2 .skill .stat span {
     color: var(--pointColor);
-    font-size: 12vw;
+    font-size: 13vw;
     margin-bottom: -40px;
     font-family: var(--fontN);
     cursor: pointer;
@@ -197,6 +252,15 @@ svg {
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
+.hover__img__sub {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 10%;
+    bottom: -22%;
+}
+
+
 #section2 .skill .stat span:hover {
     filter: blur(15px);
 }
@@ -214,7 +278,7 @@ svg {
     text-align: right;
     padding-top: 80px;
     padding-bottom: 80px;
-    min-height: 100vh;
+    min-height: 110vh;
     overflow: hidden;
     z-index: 5;
     position: relative;
@@ -279,18 +343,40 @@ svg {
     text-transform: uppercase;
 }
 
-#section4,
-#section5 {
-    min-height: 325vh;
-    width: 100%;
-}
 
 #section4 {
     background-color: #0060dd;
+    min-height: 240vh;
+    width: 100%;
 }
+
+#section4 .bgWrap {
+    background-color: #0060dd;
+    position: relative;
+    height: 160vh;
+    z-index: 1300;
+    bottom: -400px;
+}
+
+#section4 .project__header .project__title.textout,
+#section5 .project__header .project__title2.textout {
+    position: relative;
+    z-index: 1400;
+}
+
 
 #section5 {
     background-color: #1F023C;
+    min-height: 240vh;
+    width: 100%;
+}
+
+#section5 .bgWrap2 {
+    background-color: #1F023C;
+    position: relative;
+    height: 160vh;
+    z-index: 1300;
+    bottom: -400px;
 }
 
 #section4 .project__header,
@@ -304,20 +390,19 @@ svg {
 }
 
 #section4 .project__header .project__title h2,
-#section5 .project__header .project__title h2 {
+#section5 .project__header .project__title2 h2 {
     font-family: var(--fontH);
     font-size: 24rem;
     color: var(--white);
     text-transform: uppercase;
-    margin-bottom: 1%;
-    line-height: .8;
     position: relative;
-    z-index: 100;
-
+    z-index: 1400;
+    margin-bottom: 1%;
+    line-height: 0.8;
 }
 
 #section4 .project__header .project__title.textout h2,
-#section5 .project__header .project__title.textout h2 {
+#section5 .project__header .project__title2.textout h2 {
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #f9f6f2;
@@ -326,7 +411,7 @@ svg {
 }
 
 #section4 .project__header .project__title .project__text,
-#section5 .project__header .project__title .project__text {
+#section5 .project__header .project__title2 .project__text {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -339,7 +424,7 @@ svg {
 }
 
 #section4 .project__header .project__title .project__text h3,
-#section5 .project__header .project__title .project__text h3 {
+#section5 .project__header .project__title2 .project__text h3 {
     width: 65.375vw;
     line-height: 100%;
     text-transform: uppercase;
@@ -352,7 +437,7 @@ svg {
 }
 
 #section4 .project__header .project__title .project__text p,
-#section5 .project__header .project__title .project__text p {
+#section5 .project__header .project__title2 .project__text p {
     width: 18.375vw;
     font-size: 1rem;
     line-height: 1.625;
@@ -370,22 +455,19 @@ svg {
     display: flex;
     flex-direction: column;
     position: relative;
+    top: 50%;
     left: 50%;
-    top: 1200px;
     transform: translateX(-50%);
-
+    z-index: 1500;
 }
 
 #section4 .project__img img,
 #section5 .project__img img {
     margin-bottom: 40px;
     object-fit: cover;
-    position: relative;
+    position: absolute;
+    bottom: -50%;
     left: 50%;
     transform: translateX(-50%);
-}
-
-#section4 .project__img img:nth-child(2),
-#section5 .project__img img:nth-child(2) {
-    left: 80%;
+    z-index: 1500;
 }
