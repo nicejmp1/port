@@ -231,7 +231,7 @@ svg {
 
 #section2 .skill .stat span {
     color: var(--pointColor);
-    font-size: 13vw;
+    font-size: 15vw;
     margin-bottom: -40px;
     font-family: var(--fontN);
     cursor: pointer;
